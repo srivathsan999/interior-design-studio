@@ -1,0 +1,168 @@
+/* Theme Variables - Light & Dark Mode */
+:root {
+  /* Light Mode */
+  --bg-primary: #F6F5F3;
+  --bg-surface: rgba(255, 255, 255, 0.7);
+  --text-primary: #1E1E1E;
+  --text-secondary: #5F5F5F;
+  --accent: #C9A46A;
+  --border: rgba(0, 0, 0, 0.08);
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-input: 10px;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-primary: #0E0E11;
+  --bg-surface: rgba(255, 255, 255, 0.08);
+  --text-primary: #F2F2F2;
+  --text-secondary: #B5B5B5;
+  --accent: #D6B676;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+p, span, a, li, label, input, textarea, select {
+  color: var(--text-primary);
+  opacity: 0.9;
+}
+
+/* Ensure minimum opacity for accessibility */
+p, span, a, li, label {
+  opacity: 0.9;
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--bg-surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
+
+/* Neomorphism */
+.neomorphic {
+  background: var(--bg-primary);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .neomorphic {
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.03);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: var(--radius-button);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 164, 106, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Inputs */
+input, textarea, select {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  opacity: 0.9;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 164, 106, 0.1);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

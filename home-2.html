@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Interior - Premium Interior Design Studio</title>
+    <meta name="description" content="Transform your space with Atelier Interior. Premium interior design services for residential and commercial projects.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body class="page-load">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 hover:opacity-70 transition-opacity">
+                    <img src="assets/images/logo.svg" alt="Atelier Interior Logo" class="h-10 w-10">
+                    <span class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--text-primary);">Atelier Interior</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="relative" id="home-dropdown-toggle">
+                        <a href="#" class="flex items-center space-x-1" style="color: var(--text-primary); opacity: 0.9;">
+                            <span>Home</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div id="home-dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-48 glass rounded-lg shadow-lg py-2 opacity-0 transition-opacity duration-200">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-opacity-20" style="color: var(--text-primary); opacity: 0.9;">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2 hover:bg-opacity-20" style="color: var(--text-primary); opacity: 0.9;">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">About</a>
+                    <a href="services.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Services</a>
+                    <a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
+                    <a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Blog</a>
+                    <a href="pricing.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
+                    <a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
+                    <a href="login.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors" aria-label="Toggle theme">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <div>
+                        <button id="mobile-home-dropdown-toggle" class="flex items-center justify-between w-full" style="color: var(--text-primary); opacity: 0.9;">
+                            <span>Home</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-home-dropdown-menu" class="hidden pl-4 mt-2 space-y-2">
+                            <a href="index.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 1</a>
+                            <a href="home-2.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" style="color: var(--text-primary); opacity: 0.9;">About</a>
+                    <a href="services.html" style="color: var(--text-primary); opacity: 0.9;">Services</a>
+                    <a href="projects.html" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
+                    <a href="blog.html" style="color: var(--text-primary); opacity: 0.9;">Blog</a>
+                    <a href="pricing.html" style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
+                    <a href="contact.html" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
+                    <a href="login.html" style="color: var(--text-primary); opacity: 0.9;">Login</a>
+                    <a href="signup.html" class="btn btn-primary inline-block text-center">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Width Hero Section -->
+    <section class="pt-20 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 image-zoom">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1920&q=80" alt="Luxury interior design" class="w-full h-full object-cover">
+            <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 text-white" style="font-family: var(--font-heading);">
+                    Crafting Timeless Interiors
+                </h1>
+                <p class="text-xl mb-8 text-white opacity-90">
+                    Where elegance meets functionality. We transform spaces into extraordinary experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="projects.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); color: white; border-color: white;">Explore Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8" style="background: var(--bg-surface);">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stagger-item">
+                    <h3 class="text-4xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--accent);">500+</h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Projects Completed</p>
+                </div>
+                <div class="stagger-item">
+                    <h3 class="text-4xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--accent);">15+</h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Years Experience</p>
+                </div>
+                <div class="stagger-item">
+                    <h3 class="text-4xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--accent);">200+</h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Happy Clients</p>
+                </div>
+                <div class="stagger-item">
+                    <h3 class="text-4xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--accent);">50+</h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masonry Grid Projects -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">
+                    Our Latest Work
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-secondary); opacity: 0.9;">
+                    A curated selection of our most recent interior design projects
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card stagger-item md:col-span-2">
+                    <div class="image-zoom">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Modern living room" class="w-full h-96 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Modern Living Space
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Contemporary design with minimalist aesthetics</p>
+                </div>
+                <div class="card stagger-item">
+                    <div class="image-zoom">
+                        <img src="https://images.unsplash.com/photo-1631888562449-98ecdd8390b1?auto=format&fit=crop&w=600&q=80" alt="Luxury bedroom" class="w-full h-96 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Luxury Bedroom
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Elegant and sophisticated</p>
+                </div>
+                <div class="card stagger-item">
+                    <div class="image-zoom">
+                        <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=600&q=80" alt="Kitchen design" class="w-full h-96 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Contemporary Kitchen
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Functional beauty</p>
+                </div>
+                <div class="card stagger-item md:col-span-2">
+                    <div class="image-zoom">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Office design" class="w-full h-96 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Commercial Office Space
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Inspiring workspace design</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: var(--bg-surface);">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">
+                    Our Services
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card stagger-item text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--accent); opacity: 0.2;">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Residential
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Home design solutions</p>
+                </div>
+                <div class="card stagger-item text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--accent); opacity: 0.2;">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Commercial
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Workspace design</p>
+                </div>
+                <div class="card stagger-item text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--accent); opacity: 0.2;">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Planning
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Space planning</p>
+                </div>
+                <div class="card stagger-item text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--accent); opacity: 0.2;">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Consultation
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">Expert advice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">
+                    Client Testimonials
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-secondary); opacity: 0.9;">
+                    Real stories from clients who transformed their spaces with us
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4 image-zoom">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">John Anderson</h4>
+                            <p class="text-sm" style="color: var(--text-secondary); opacity: 0.9;">Homeowner</p>
+                        </div>
+                    </div>
+                    <p class="mb-4" style="color: var(--text-secondary); opacity: 0.9;">
+                        "Atelier Interior transformed our home beyond our expectations. Their attention to detail and creative vision brought our dream space to life. Highly recommend!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                </div>
+                <div class="card stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4 image-zoom">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Sarah Martinez</h4>
+                            <p class="text-sm" style="color: var(--text-secondary); opacity: 0.9;">Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="mb-4" style="color: var(--text-secondary); opacity: 0.9;">
+                        "The team at Atelier Interior designed our office space beautifully. It's now a place where our employees love to work, and clients are always impressed. Professional and creative!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                </div>
+                <div class="card stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4 image-zoom">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Michael Chen</h4>
+                            <p class="text-sm" style="color: var(--text-secondary); opacity: 0.9;">Architect</p>
+                        </div>
+                    </div>
+                    <p class="mb-4" style="color: var(--text-secondary); opacity: 0.9;">
+                        "Working with Atelier Interior was a pleasure. Their design expertise and project management skills are exceptional. They delivered on time and exceeded our expectations."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: var(--bg-surface);">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">
+                    Our Design Process
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-secondary); opacity: 0.9;">
+                    A structured approach to bringing your vision to life
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-3xl font-bold" style="background: var(--accent); color: white;">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Discovery
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">
+                        We begin by understanding your lifestyle, preferences, and vision for your space.
+                    </p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-3xl font-bold" style="background: var(--accent); color: white;">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Design
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">
+                        Our team creates detailed design concepts and 3D visualizations for your approval.
+                    </p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-3xl font-bold" style="background: var(--accent); color: white;">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Development
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">
+                        We source materials, coordinate with contractors, and manage every detail of execution.
+                    </p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-3xl font-bold" style="background: var(--accent); color: white;">
+                        4
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Delivery
+                    </h3>
+                    <p style="color: var(--text-secondary); opacity: 0.9;">
+                        Final styling and finishing touches complete your transformation. Your dream space is ready!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6" style="font-family: var(--font-heading); color: var(--text-primary);">
+                        Why Choose Atelier Interior?
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background: var(--accent); opacity: 0.2;">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                                    Expert Team
+                                </h3>
+                                <p style="color: var(--text-secondary); opacity: 0.9;">
+                                    Our experienced designers bring years of expertise and a passion for creating beautiful spaces.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background: var(--accent); opacity: 0.2;">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                                    Personalized Service
+                                </h3>
+                                <p style="color: var(--text-secondary); opacity: 0.9;">
+                                    Every project is unique. We tailor our approach to match your style, budget, and timeline.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background: var(--accent); opacity: 0.2;">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--accent);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2" style="font-family: var(--font-heading); color: var(--text-primary);">
+                                    Quality Guarantee
+                                </h3>
+                                <p style="color: var(--text-secondary); opacity: 0.9;">
+                                    We stand behind our work with a commitment to quality and client satisfaction on every project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-zoom">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Design team" class="w-full rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-4 sm:px-6 lg:px-8" style="background: var(--bg-surface); border-top: 1px solid var(--border);">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.svg" alt="Atelier Interior Logo" class="h-10 w-10">
+                        <h3 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--text-primary);">
+                            Atelier Interior
+                        </h3>
+                    </div>
+                    <p style="color: var(--text-secondary); opacity: 0.9; line-height: 1.6;">
+                        Creating beautiful, functional spaces that reflect your unique style and enhance your quality of life.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">About Us</a></li>
+                        <li><a href="services.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Services</a></li>
+                        <li><a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Projects</a></li>
+                        <li><a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Blog</a></li>
+                        <li><a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Residential Design</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Commercial Design</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Space Planning</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Contact</h4>
+                    <ul class="space-y-2 mb-6">
+                        <li style="color: var(--text-secondary); opacity: 0.9;">123 Design Street</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">New York, NY 10001</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">+1 (555) 123-4567</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">info@atelierinterior.com</li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:opacity-70 transition-opacity" aria-label="Facebook" style="color: var(--accent);">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition-opacity" aria-label="Instagram" style="color: var(--accent);">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition-opacity" aria-label="Pinterest" style="color: var(--accent);">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12c5.084 0 9.426-3.163 11.174-7.637-.15-.83-.285-2.203.06-3.143.32-1.055 2.07-7.053 2.07-7.053s-.527-1.054-.527-2.612c0-2.448 1.42-4.274 3.188-4.274 1.503 0 2.23 1.128 2.23 2.48 0 1.51-.96 3.77-1.455 5.86-.414 1.752.877 3.18 2.606 3.18 3.128 0 5.525-3.297 5.525-8.055 0-3.35-2.407-5.69-5.847-5.69-3.98 0-6.31 2.987-6.31 6.08 0 1.18.454 2.44 1.02 3.13.112.136.128.255.095.393-.103.43-.333 1.357-.378 1.548-.06.23-.19.28-.44.17-1.646-.767-2.675-3.15-2.675-5.07 0-4.13 3.003-7.928 8.73-7.928 4.583 0 8.144 3.263 8.144 7.62 0 4.55-2.87 8.206-6.85 8.206-1.337 0-2.595-.695-3.026-1.81 0 0-.66 2.52-.82 3.14-.295 1.13-1.09 2.545-1.62 3.41C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t" style="border-color: var(--border);">
+                <p class="text-center" style="color: var(--text-secondary); opacity: 0.9;">
+                    &copy; 2024 Atelier Interior. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>
+
