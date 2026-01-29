@@ -29,12 +29,12 @@
                         </div>
                     </div>
                     <a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">About</a>
-                    <a href="services.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Services</a>
+                    <a href="services.html" class="hover:opacity-70 transition-opacity font-semibold" style="color: var(--accent);">Services</a>
                     <a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
                     <a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Blog</a>
                     <a href="pricing.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
                     <a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
-                    <a href="login.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Login</a>
+                    <a href="login.html" class="btn btn-secondary">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                     <button id="theme-toggle" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors" aria-label="Toggle theme">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
@@ -48,13 +48,19 @@
                 <div class="flex flex-col space-y-4 mt-4">
                     <div><button id="mobile-home-dropdown-toggle" class="flex items-center justify-between w-full" style="color: var(--text-primary); opacity: 0.9;"><span>Home</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div id="mobile-home-dropdown-menu" class="hidden pl-4 mt-2 space-y-2"><a href="index.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 1</a><a href="home-2.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 2</a></div></div>
                     <a href="about.html" style="color: var(--text-primary); opacity: 0.9;">About</a>
-                    <a href="services.html" style="color: var(--text-primary); opacity: 0.9;">Services</a>
+                    <a href="services.html" class="font-semibold" style="color: var(--accent);">Services</a>
                     <a href="projects.html" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
                     <a href="blog.html" style="color: var(--text-primary); opacity: 0.9;">Blog</a>
                     <a href="pricing.html" style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
                     <a href="contact.html" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
-                    <a href="login.html" style="color: var(--text-primary); opacity: 0.9;">Login</a>
+                    <a href="login.html" class="btn btn-secondary inline-block text-center">Login</a>
                     <a href="signup.html" class="btn btn-primary inline-block text-center">Sign Up</a>
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors w-full flex items-center justify-center mt-2" aria-label="Toggle theme" onclick="document.getElementById('theme-toggle').click();">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <span class="ml-2" style="color: var(--text-primary); opacity: 0.9;">Toggle Theme</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -66,10 +72,10 @@
             <div class="image-zoom mb-8">
                 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Commercial Design" class="w-full h-96 object-cover rounded-2xl">
             </div>
-            <h1 class="text-4xl sm:text-5xl font-bold mb-6" style="font-family: var(--font-heading); color: var(--text-primary);">Commercial Interior Design</h1>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">Commercial Interior Design</h1>
             <div class="prose max-w-none mb-12" style="color: var(--text-secondary); opacity: 0.9;">
                 <p class="text-lg mb-4">Our commercial interior design service creates inspiring workspaces that enhance productivity, reflect your brand identity, and provide exceptional experiences for employees and clients. We understand that commercial spaces must balance aesthetics with functionality, compliance, and brand messaging.</p>
-                <h2 class="text-3xl font-bold mt-8 mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">What We Offer</h2>
+                <h2 class="text-3xl font-bold mt-8 mb-4 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">What We Offer</h2>
                 <ul class="space-y-3 mb-6">
                     <li><strong style="color: var(--text-primary);">Office Design:</strong> Modern workspaces that foster collaboration and productivity</li>
                     <li><strong style="color: var(--text-primary);">Retail Spaces:</strong> Engaging environments that enhance customer experience and drive sales</li>
@@ -77,7 +83,7 @@
                     <li><strong style="color: var(--text-primary);">Brand Integration:</strong> Seamlessly incorporating your brand identity into the physical space</li>
                     <li><strong style="color: var(--text-primary);">Compliance & Safety:</strong> Ensuring all designs meet building codes and accessibility standards</li>
                 </ul>
-                <h2 class="text-3xl font-bold mt-8 mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">Our Process</h2>
+                <h2 class="text-3xl font-bold mt-8 mb-4 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">Our Process</h2>
                 <p class="mb-4">We follow a comprehensive approach tailored to commercial projects:</p>
                 <ol class="space-y-3 mb-6">
                     <li><strong style="color: var(--text-primary);">Discovery Phase:</strong> Understanding your business, brand, and operational needs</li>
