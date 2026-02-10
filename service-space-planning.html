@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,84 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/animations.css">
 </head>
+
 <body class="page-load">
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center space-x-3 hover:opacity-70 transition-opacity">
                     <img src="assets/images/logo.svg" alt="Atelier Interior Logo" class="h-10 w-10">
-                    <span class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--text-primary);">Atelier Interior</span>
+                    <span class="text-2xl font-bold"
+                        style="font-family: var(--font-heading); color: var(--text-primary);">Atelier Interior</span>
                 </a>
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden xl:flex items-center space-x-8">
                     <div class="relative" id="home-dropdown-toggle">
-                        <a href="#" class="flex items-center space-x-1" style="color: var(--text-primary); opacity: 0.9;"><span>Home</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
-                        <div id="home-dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-48 glass rounded-lg shadow-lg py-2 opacity-0 transition-opacity duration-200">
-                            <a href="index.html" class="block px-4 py-2 hover:bg-opacity-20" style="color: var(--text-primary); opacity: 0.9;">Home 1</a>
-                            <a href="home-2.html" class="block px-4 py-2 hover:bg-opacity-20" style="color: var(--text-primary); opacity: 0.9;">Home 2</a>
+                        <a href="#" class="flex items-center space-x-1"
+                            style="color: var(--text-primary); opacity: 0.9;"><span>Home</span><svg class="w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></a>
+                        <div id="home-dropdown-menu"
+                            class="hidden absolute top-full left-0 mt-2 w-48 glass rounded-lg shadow-lg py-2 opacity-0 transition-opacity duration-200">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-opacity-20"
+                                style="color: var(--text-primary); opacity: 0.9;">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2 hover:bg-opacity-20"
+                                style="color: var(--text-primary); opacity: 0.9;">Home 2</a>
                         </div>
                     </div>
-                    <a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">About</a>
-                    <a href="services.html" class="hover:opacity-70 transition-opacity font-semibold" style="color: var(--accent);">Services</a>
-                    <a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
-                    <a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Blog</a>
-                    <a href="pricing.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
-                    <a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
+                    <a href="about.html" class="hover:opacity-70 transition-opacity"
+                        style="color: var(--text-primary); opacity: 0.9;">About</a>
+                    <a href="services.html" class="hover:opacity-70 transition-opacity font-semibold"
+                        style="color: var(--accent);">Services</a>
+                    <a href="projects.html" class="hover:opacity-70 transition-opacity"
+                        style="color: var(--text-primary); opacity: 0.9;">Projects</a>
+                    <a href="blog.html" class="hover:opacity-70 transition-opacity"
+                        style="color: var(--text-primary); opacity: 0.9;">Blog</a>
+                    <a href="pricing.html" class="hover:opacity-70 transition-opacity"
+                        style="color: var(--text-primary); opacity: 0.9;">Pricing</a>
+                    <a href="contact.html" class="hover:opacity-70 transition-opacity"
+                        style="color: var(--text-primary); opacity: 0.9;">Contact</a>
                     <a href="login.html" class="btn btn-secondary">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors" aria-label="Toggle theme">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors"
+                        aria-label="Toggle theme">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            style="color: var(--text-primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
                     </button>
                 </div>
-                <button id="mobile-menu-toggle" class="lg:hidden p-2" aria-label="Toggle menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <button id="mobile-menu-toggle" class="xl:hidden p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="color: var(--text-primary);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+            <div id="mobile-menu" class="hidden xl:hidden pb-4">
                 <div class="flex flex-col space-y-4 mt-4">
-                    <div><button id="mobile-home-dropdown-toggle" class="flex items-center justify-between w-full" style="color: var(--text-primary); opacity: 0.9;"><span>Home</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div id="mobile-home-dropdown-menu" class="hidden pl-4 mt-2 space-y-2"><a href="index.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 1</a><a href="home-2.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home 2</a></div></div>
+                    <div><button id="mobile-home-dropdown-toggle" class="flex items-center justify-between w-full"
+                            style="color: var(--text-primary); opacity: 0.9;"><span>Home</span><svg class="w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <div id="mobile-home-dropdown-menu" class="hidden pl-4 mt-2 space-y-2"><a href="index.html"
+                                class="block" style="color: var(--text-primary); opacity: 0.9;">Home 1</a><a
+                                href="home-2.html" class="block" style="color: var(--text-primary); opacity: 0.9;">Home
+                                2</a></div>
+                    </div>
                     <a href="about.html" style="color: var(--text-primary); opacity: 0.9;">About</a>
                     <a href="services.html" class="font-semibold" style="color: var(--accent);">Services</a>
                     <a href="projects.html" style="color: var(--text-primary); opacity: 0.9;">Projects</a>
@@ -55,9 +94,14 @@
                     <a href="contact.html" style="color: var(--text-primary); opacity: 0.9;">Contact</a>
                     <a href="login.html" class="btn btn-secondary inline-block text-center">Login</a>
                     <a href="signup.html" class="btn btn-primary inline-block text-center">Sign Up</a>
-                    <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-opacity-20 transition-colors w-full flex items-center justify-center mt-2" aria-label="Toggle theme" onclick="document.getElementById('theme-toggle').click();">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-lg hover:bg-opacity-20 transition-colors w-full flex items-center justify-center mt-2"
+                        aria-label="Toggle theme" onclick="document.getElementById('theme-toggle').click();">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            style="color: var(--text-primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
                         </svg>
                         <span class="ml-2" style="color: var(--text-primary); opacity: 0.9;">Toggle Theme</span>
                     </button>
@@ -68,48 +112,133 @@
 
     <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto max-w-4xl">
-            <div class="mb-8"><a href="services.html" class="inline-flex items-center" style="color: var(--accent);"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>Back to Services</a></div>
+            <div class="mb-8"><a href="services.html" class="inline-flex items-center"
+                    style="color: var(--accent);"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>Back to Services</a></div>
             <div class="image-zoom mb-8">
-                <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80" alt="Space Planning" class="w-full h-96 object-cover rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80"
+                    alt="Space Planning" class="w-full h-96 object-cover rounded-2xl">
             </div>
-            <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">Space Planning</h1>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-center"
+                style="font-family: var(--font-heading); color: var(--text-primary);">Space Planning</h1>
             <div class="prose max-w-none mb-12" style="color: var(--text-secondary); opacity: 0.9;">
-                <p class="text-lg mb-4">Effective space planning is the foundation of great interior design. Our space planning service optimizes your floor plan for maximum functionality, flow, and efficiency. We analyze how you use your space and create layouts that enhance daily living and working.</p>
-                <h2 class="text-3xl font-bold mt-8 mb-4 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">What We Offer</h2>
+                <p class="text-lg mb-4">Effective space planning is the foundation of great interior design. Our space
+                    planning service optimizes your floor plan for maximum functionality, flow, and efficiency. We
+                    analyze how you use your space and create layouts that enhance daily living and working.</p>
+                <h2 class="text-3xl font-bold mt-8 mb-4 text-center"
+                    style="font-family: var(--font-heading); color: var(--text-primary);">What We Offer</h2>
                 <ul class="space-y-3 mb-6">
-                    <li><strong style="color: var(--text-primary);">Floor Plan Optimization:</strong> Redesigning layouts to maximize usable space and functionality</li>
-                    <li><strong style="color: var(--text-primary);">Traffic Flow Analysis:</strong> Ensuring natural movement patterns and accessibility</li>
-                    <li><strong style="color: var(--text-primary);">Furniture Placement:</strong> Strategic positioning for comfort, function, and visual balance</li>
-                    <li><strong style="color: var(--text-primary);">Storage Solutions:</strong> Custom storage design that maximizes space efficiency</li>
-                    <li><strong style="color: var(--text-primary);">Zoning Strategies:</strong> Creating distinct areas for different activities within open spaces</li>
+                    <li><strong style="color: var(--text-primary);">Floor Plan Optimization:</strong> Redesigning
+                        layouts to maximize usable space and functionality</li>
+                    <li><strong style="color: var(--text-primary);">Traffic Flow Analysis:</strong> Ensuring natural
+                        movement patterns and accessibility</li>
+                    <li><strong style="color: var(--text-primary);">Furniture Placement:</strong> Strategic positioning
+                        for comfort, function, and visual balance</li>
+                    <li><strong style="color: var(--text-primary);">Storage Solutions:</strong> Custom storage design
+                        that maximizes space efficiency</li>
+                    <li><strong style="color: var(--text-primary);">Zoning Strategies:</strong> Creating distinct areas
+                        for different activities within open spaces</li>
                 </ul>
-                <h2 class="text-3xl font-bold mt-8 mb-4 text-center" style="font-family: var(--font-heading); color: var(--text-primary);">Our Process</h2>
+                <h2 class="text-3xl font-bold mt-8 mb-4 text-center"
+                    style="font-family: var(--font-heading); color: var(--text-primary);">Our Process</h2>
                 <p class="mb-4">We take a methodical approach to space planning:</p>
                 <ol class="space-y-3 mb-6">
-                    <li><strong style="color: var(--text-primary);">Site Analysis:</strong> Measuring and documenting existing conditions and constraints</li>
-                    <li><strong style="color: var(--text-primary);">Needs Assessment:</strong> Understanding how you currently use and want to use the space</li>
-                    <li><strong style="color: var(--text-primary);">Concept Development:</strong> Creating multiple layout options for your review</li>
-                    <li><strong style="color: var(--text-primary);">Refinement:</strong> Refining the chosen layout with detailed furniture and fixture placement</li>
-                    <li><strong style="color: var(--text-primary);">Final Documentation:</strong> Providing detailed floor plans and specifications for implementation</li>
+                    <li><strong style="color: var(--text-primary);">Site Analysis:</strong> Measuring and documenting
+                        existing conditions and constraints</li>
+                    <li><strong style="color: var(--text-primary);">Needs Assessment:</strong> Understanding how you
+                        currently use and want to use the space</li>
+                    <li><strong style="color: var(--text-primary);">Concept Development:</strong> Creating multiple
+                        layout options for your review</li>
+                    <li><strong style="color: var(--text-primary);">Refinement:</strong> Refining the chosen layout with
+                        detailed furniture and fixture placement</li>
+                    <li><strong style="color: var(--text-primary);">Final Documentation:</strong> Providing detailed
+                        floor plans and specifications for implementation</li>
                 </ol>
             </div>
             <div class="text-center"><a href="contact.html" class="btn btn-primary">Get Started</a></div>
         </div>
     </section>
 
+        <!-- Footer -->
     <footer class="py-16 px-4 sm:px-6 lg:px-8" style="background: var(--bg-surface); border-top: 1px solid var(--border);">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div><div class="flex items-center space-x-3 mb-4"><img src="assets/images/logo.svg" alt="Atelier Interior Logo" class="h-10 w-10"><h3 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--text-primary);">Atelier Interior</h3></div><p style="color: var(--text-secondary); opacity: 0.9; line-height: 1.6;">Creating beautiful, functional spaces that reflect your unique style and enhance your quality of life.</p></div>
-                <div><h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Quick Links</h4><ul class="space-y-2"><li><a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">About Us</a></li><li><a href="services.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Services</a></li><li><a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Projects</a></li><li><a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Blog</a></li><li><a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Contact</a></li></ul></div>
-                <div><h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Services</h4><ul class="space-y-2"><li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Residential Design</a></li><li><a href="service-commercial.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Commercial Design</a></li><li><a href="service-space-planning.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Space Planning</a></li><li><a href="service-consultation.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Consultation</a></li></ul></div>
-                <div><h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Contact</h4><ul class="space-y-2 mb-6"><li style="color: var(--text-secondary); opacity: 0.9;">123 Design Street</li><li style="color: var(--text-secondary); opacity: 0.9;">New York, NY 10001</li><li style="color: var(--text-secondary); opacity: 0.9;">+1 (555) 123-4567</li><li style="color: var(--text-secondary); opacity: 0.9;">info@atelierinterior.com</li></ul><div class="flex space-x-4"><a href="#" class="hover:opacity-70 transition-opacity" aria-label="Facebook" style="color: var(--accent);"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="#" class="hover:opacity-70 transition-opacity" aria-label="Instagram" style="color: var(--accent);"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="#" class="hover:opacity-70 transition-opacity" aria-label="Pinterest" style="color: var(--accent);"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12c5.084 0 9.426-3.163 11.174-7.637-.15-.83-.285-2.203.06-3.143.32-1.055 2.07-7.053 2.07-7.053s-.527-1.054-.527-2.612c0-2.448 1.42-4.274 3.188-4.274 1.503 0 2.23 1.128 2.23 2.48 0 1.51-.96 3.77-1.455 5.86-.414 1.752.877 3.18 2.606 3.18 3.128 0 5.525-3.297 5.525-8.055 0-3.35-2.407-5.69-5.847-5.69-3.98 0-6.31 2.987-6.31 6.08 0 1.18.454 2.44 1.02 3.13.112.136.128.255.095.393-.103.43-.333 1.357-.378 1.548-.06.23-.19.28-.44.17-1.646-.767-2.675-3.15-2.675-5.07 0-4.13 3.003-7.928 8.73-7.928 4.583 0 8.144 3.263 8.144 7.62 0 4.55-2.87 8.206-6.85 8.206-1.337 0-2.595-.695-3.026-1.81 0 0-.66 2.52-.82 3.14-.295 1.13-1.09 2.545-1.62 3.41C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a></div></div>
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.svg" alt="Atelier Interior Logo" class="h-10 w-10">
+                        <h3 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--text-primary);">
+                            Atelier Interior
+                        </h3>
+                    </div>
+                    <p style="color: var(--text-secondary); opacity: 0.9; line-height: 1.6;">
+                        Creating beautiful, functional spaces that reflect your unique style and enhance your quality of life.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">About Us</a></li>
+                        <li><a href="services.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Services</a></li>
+                        <li><a href="projects.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Projects</a></li>
+                        <li><a href="blog.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Blog</a></li>
+                        <li><a href="contact.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Residential Design</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Commercial Design</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Space Planning</a></li>
+                        <li><a href="service-details.html" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary); opacity: 0.9;">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Contact</h4>
+                    <ul class="space-y-2 mb-6">
+                        <li style="color: var(--text-secondary); opacity: 0.9;">123 Design Street</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">New York, NY 10001</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">+1 (555) 123-4567</li>
+                        <li style="color: var(--text-secondary); opacity: 0.9;">info@atelierinterior.com</li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="p-3 rounded-xl glass hover:opacity-70 transition-opacity" style="border: 1px solid var(--border);" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="#1877F2" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="p-3 rounded-xl glass hover:opacity-70 transition-opacity" style="border: 1px solid var(--border);" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="#E4405F" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="p-3 rounded-xl glass hover:opacity-70 transition-opacity" style="border: 1px solid var(--border);" aria-label="Pinterest">
+                            <svg class="w-6 h-6" fill="#BD081C" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12c5.084 0 9.426-3.163 11.174-7.637-.15-.83-.285-2.203.06-3.143.32-1.055 2.07-7.053 2.07-7.053s-.527-1.054-.527-2.612c0-2.448 1.42-4.274 3.188-4.274 1.503 0 2.23 1.128 2.23 2.48 0 1.51-.96 3.77-1.455 5.86-.414 1.752.877 3.18 2.606 3.18 3.128 0 5.525-3.297 5.525-8.055 0-3.35-2.407-5.69-5.847-5.69-3.98 0-6.31 2.987-6.31 6.08 0 1.18.454 2.44 1.02 3.13.112.136.128.255.095.393-.103.43-.333 1.357-.378 1.548-.06.23-.19.28-.44.17-1.646-.767-2.675-3.15-2.675-5.07 0-4.13 3.003-7.928 8.73-7.928 4.583 0 8.144 3.263 8.144 7.62 0 4.55-2.87 8.206-6.85 8.206-1.337 0-2.595-.695-3.026-1.81 0 0-.66 2.52-.82 3.14-.295 1.13-1.09 2.545-1.62 3.41C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="mt-12 pt-8 border-t" style="border-color: var(--border);"><p class="text-center" style="color: var(--text-secondary); opacity: 0.9;">&copy; 2026 Atelier Interior. All rights reserved.</p></div>
+            <div class="mt-12 pt-8 border-t" style="border-color: var(--border);">
+                <p class="text-center" style="color: var(--text-secondary); opacity: 0.9;">
+                    &copy; 2026 Atelier Interior. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/navbar.js"></script>
 </body>
-</html>
 
+</html>
